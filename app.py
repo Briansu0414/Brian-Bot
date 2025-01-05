@@ -108,7 +108,7 @@ def message_text(event):
 
                 to=event.source.user_id,  # 從事件取得用戶的 ID
 
-                messages=[TextMessage(text='PUSH!')]
+                messages=[TextMessage(text='理性投資!')]
             )
         )
 
