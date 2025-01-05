@@ -76,8 +76,6 @@ def callback():
 
     return 'OK'
 
-
-
 # 訊息事件
 
 @line_handler.add(MessageEvent, message=TextMessageContent)
@@ -116,22 +114,4 @@ def message_text(event):
 
 
 if __name__ == "__main__":
-
-    with ApiClient(configuration) as api_client:
-
-        line_bot_api = MessagingApi(api_client)
-
-
-        # 主動推播訊息
-
-        line_bot_api.push_message_with_http_info(
-
-            PushMessageRequest(
-
-                to='Uad5f1a3daf5e695c3dbb0e802db5fb55',  # 固定的 user_id
-
-                messages=[TextMessage(text='Hello! This is a proactive push message.')]
-            )
-        )
-    
     app.run()
